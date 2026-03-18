@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All posts</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>Social Media Posts</h1>
+    <% for(post of posts){ %>
+    <div class="Inpost">
+      <h3>username: @<%= post.username %></h3>
+      <h4><%= post.content %></h4>
+      <img src="<%=post.upload[0].image %>" alt="" /> <br>
+      <span>&#x2764 <%= post.upload[0].likes %></span>
+      <span>&#x1F4AC; <%= post.upload[0].comments %></span>
+       <a href="http://localhost:3000/posts/<%= post.id %>">Details</a> &nbsp; &nbsp;
+       <a href="http://localhost:3000/posts/<%= post.id %>/edit">Edit</a>
+       <form action="/posts/<%= post.id %>?_method=DELETE" method="post">
+        <button>delete</button>
+       </form>
+      <hr>
+    </div>
+    <br>
+    <% } %>
+    
+    <a href="http://localhost:3000/posts/new">Create new posts</a>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+body {
+  background-color: bisque;
+}
+h1 {
+  color: maroon;
+}
+h3 {
+  font-style: italic;
+}
+
+img {
+  width: 500px;
+  height: 700px;
+}

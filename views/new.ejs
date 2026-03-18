@@ -1,0 +1,42 @@
+<%- include('includes/header.ejs') %>
+  <body>
+    <h1>Create new posts</h1>
+    <form action="/posts/" method="post">
+      <input
+        type="text"
+        name="username"
+        rows="10"
+        cols="50"
+        placeholder="username"
+      />
+      <br /><br />
+      <textarea
+        name="content"
+        id=""
+        placeholder="Write a caption here"
+        rows="5"
+        cols="50"
+      ></textarea>
+      <br /><br />
+      <textarea
+        name="image"
+        id=""
+        rows="3"
+        cols="50"
+        placeholder="image url here!"
+      ></textarea>
+      <br />
+      <br />
+      <button>upload</button>
+    </form>
+  </body>
+</html>
+
+<!-- <h1>Details posts</h1>
+    <h3>id: <%= post.id %></h3>
+    <h4>username: @<%= post.username %></h4>
+    <span>Followers: <%= post.followers %></span> &nbsp; &nbsp; &nbsp;
+    <span>Following: <%= post.following %></span>
+    <hr />
+    <p><%= post.content %></p>
+    <img src="<%= post.upload[0].image %>" alt="" /> -->
